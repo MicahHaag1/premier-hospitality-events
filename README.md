@@ -18,7 +18,7 @@ https://YOUR-USERNAME.github.io/premier-hospitality-events/
 Or at your custom domain:
 
 ```
-https://premierhospitalityevents.com
+premierhospitality-events.com
 ```
 
 ---
