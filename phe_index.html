@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premier Hospitality Events | Event Staffing & Day-Of Coordination</title>
+  <meta name="description" content="Premier Hospitality Events provides professional event staffing, day-of coordination, and event planning in Northern Colorado. It’s our pleasure to serve your event.">
+  <style>
+    :root {
+      --blue: #0a4aac;
+      --blue-dark: #05306f;
+      --gray: #555555;
+      --light-gray: #f5f5f7;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      color: #222;
+      line-height: 1.6;
+      background-color: #ffffff;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      background: var(--blue);
+      color: var(--white);
+      padding: 1rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 600;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.25rem;
+      font-size: 0.95rem;
+    }
+
+    nav a {
+      opacity: 0.9;
+    }
+
+    nav a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    section {
+      padding: 3rem 0 2rem;
+      border-bottom: 1px solid #e2e2e7;
+    }
+
+    h1, h2, h3 {
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 4vw, 2.8rem);
+      color: var(--blue-dark);
+      margin-bottom: 0.75rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: var(--blue);
+      margin-bottom: 0.75rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    p {
+      margin-bottom: 0.75rem;
+      color: var(--gray);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-tagline {
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--blue);
+      margin-bottom: 1rem;
+    }
+
+    .hero-bullets {
+      margin: 1rem 0 1.5rem;
+      color: var(--gray);
+    }
+
+    .hero-bullets li {
+      margin-left: 1.2rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: var(--white);
+      padding: 0.7rem 1.4rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .btn-primary:hover {
+      background: var(--blue-dark);
+    }
+
+    .hero-contact {
+      font-size: 0.95rem;
+      color: var(--gray);
+    }
+
+    .hero-contact strong {
+      color: var(--blue-dark);
+    }
+
+    .hero-card {
+      background: var(--light-gray);
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+      font-size: 0.95rem;
+    }
+
+    .hero-card h3 {
+      color: var(--blue);
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-card p {
+      margin-bottom: 0.35rem;
+    }
+
+    .hero-card .label {
+      font-weight: 600;
+      color: var(--blue-dark);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .service-card {
+      border-radius: 0.75rem;
+      border: 1px solid #e0e2ea;
+      padding: 1.25rem;
+      background: #ffffff;
+    }
+
+    .service-card h3 {
+      color: var(--blue-dark);
+    }
+
+    .service-card ul {
+      list-style: disc;
+      margin-left: 1.1rem;
+      margin-top: 0.4rem;
+      color: var(--gray);
+      font-size: 0.95rem;
+    }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr);
+      gap: 2rem;
+    }
+
+    .about-badge {
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      background: var(--light-gray);
+      color: var(--blue-dark);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.75rem;
+    }
+
+    .about-highlight {
+      background: var(--light-gray);
+      border-radius: 0.6rem;
+      padding: 1rem 1.2rem;
+      font-size: 0.9rem;
+      color: var(--gray);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .step {
+      border-radius: 0.75rem;
+      border: 1px solid #e0e2ea;
+      padding: 1.25rem;
+      background: #ffffff;
+    }
+
+    .step-number {
+      font-weight: 700;
+      color: var(--blue);
+      font-size: 0.9rem;
+      margin-bottom: 0.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .contact-box {
+      background: var(--light-gray);
+      padding: 1.75rem;
+      border-radius: 0.75rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .contact-details p {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .contact-details a {
+      color: var(--blue-dark);
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #888;
+      padding: 1.5rem 1rem 2rem;
+    }
+
+    @media (max-width: 800px) {
+      .hero,
+      .about-layout,
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        position: static;
+      }
+
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 520px) {
+      main {
+        padding: 1.25rem 1rem 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-mark">PHE</div>
+        <div>
+          <div>Premier Hospitality Events</div>
+          <small>Event Staffing • Day-Of Coordination • Event Planning</small>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#process">How It Works</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home">
+      <div class="hero">
+        <div>
+          <h1>Professional Event Support in Northern Colorado</h1>
+          <p class="hero-tagline">“It’s my pleasure to serve your event.”</p>
+          <p>
+            Premier Hospitality Events provides reliable event staffing, day-of
+            coordination, and planning support so you can actually enjoy your
+            own event instead of worrying about the details.
+          </p>
+          <ul class="hero-bullets">
+            <li>Event staffing for private, corporate, and community events</li>
+            <li>Day-of coordination to keep everything running smoothly</li>
+            <li>Planning support tailored to your budget and needs</li>
+          </ul>
+
+          <div class="hero-cta">
+            <a href="#contact"><button class="btn-primary">Request a Quote</button></a>
+            <div class="hero-contact">
+              <strong>Call / Text:</strong>
+              <a href="tel:+15702448405">(570) 244-8405</a> |
+              <strong>Email:</strong>
+              <a href="mailto:premierhospitalityevents@gmail.com">
+                premierhospitalityevents@gmail.com
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <h3>Why Work With Premier Hospitality Events?</h3>
+          <p><span class="label">Hospitality-first:</span> Experience with Chick-fil-A–level service and city event operations.</p>
+          <p><span class="label">Calm & organized:</span> You get a steady, detail-focused presence managing the flow of your event.</p>
+          <p><span class="label">Flexible support:</span> Available for staffing only, day-of coordination, or full-service packages.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <span class="about-badge">About the Owner</span>
+      <div class="about-layout">
+        <div>
+          <h2>Meet Micah Haag</h2>
+          <p>
+            I’m Micah, founder of Premier Hospitality Events. My background
+            includes leadership roles at Chick-fil-A, Assistant General Manager
+            experience at Taco Bell, financial services as a Relationship
+            Banker, and serving as Food &amp; Beverage Coordinator for the
+            City of Greeley.
+          </p>
+          <p>
+            Across all of these roles, one theme has stayed the same:
+            <strong>take care of people well, and the rest follows.</strong>
+            I bring that same mindset into every event—whether I’m staffing a
+            small gathering, coordinating a busy wedding day, or supporting a
+            community event.
+          </p>
+          <p>
+            My goal is to give you peace of mind. You shouldn’t have to run
+            your event while trying to enjoy it. That’s what I’m here for.
+          </p>
+        </div>
+        <div>
+          <div class="about-highlight">
+            <strong>Experience Snapshot:</strong>
+            <ul style="margin-left:1.1rem; margin-top:0.4rem;">
+              <li>Food &amp; Beverage Coordinator – City of Greeley</li>
+              <li>Director of Operations – Chick-fil-A, Greeley</li>
+              <li>Assistant General Manager – Taco Bell</li>
+              <li>Relationship Banker – Truist Bank</li>
+            </ul>
+            <p style="margin-top:0.6rem;">
+              Every role sharpened my ability to lead teams, manage details, and
+              serve guests with genuine hospitality.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <h2>Services</h2>
+      <p>
+        Choose the level of support that fits your event. All services are
+        customizable and pricing can be adjusted based on event size and scope.
+      </p>
+
+      <div class="service-grid">
+        <div class="service-card">
+          <h3>Event Staffing</h3>
+          <p>
+            Professional onsite support so you don’t have to manage everything
+            yourself.
+          </p>
+          <ul>
+            <li>Setup &amp; teardown</li>
+            <li>Food &amp; beverage service</li>
+            <li>Guest assistance &amp; hospitality</li>
+            <li>Line control &amp; flow support</li>
+            <li>Light cleanup and end-of-event reset</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <h3>Day-Of Coordination</h3>
+          <p>
+            You plan the event; I run the day so everything flows smoothly.
+          </p>
+          <ul>
+            <li>Timeline creation &amp; management</li>
+            <li>Vendor communication and check-ins</li>
+            <li>Overseeing setup and key transitions</li>
+            <li>Problem-solving behind the scenes</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <h3>Event Planning Support</h3>
+          <p>
+            Ideal if you’d like help shaping the event, not only running it.
+          </p>
+          <ul>
+            <li>Concept &amp; layout recommendations</li>
+            <li>Vendor suggestions and coordination</li>
+            <li>Food &amp; beverage planning guidance</li>
+            <li>Timeline and logistics planning</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <h3>Full-Service Package</h3>
+          <p>
+            Planning + day-of coordination + staffing — one point of contact
+            from start to finish.
+          </p>
+          <ul>
+            <li>Complete planning support</li>
+            <li>Day-of management</li>
+            <li>Onsite staffing for setup, service &amp; teardown</li>
+            <li>Customized to your event needs</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="process">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">Step 1</div>
+          <h3>Reach Out</h3>
+          <p>
+            Call, text, or email with your event date, location, and what kind
+            of help you’re looking for (staffing, coordination, planning).
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">Step 2</div>
+          <h3>Simple Conversation</h3>
+          <p>
+            We’ll have a short call to walk through your event, expectations,
+            budget, and the level of support that makes the most sense.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">Step 3</div>
+          <h3>Customized Plan &amp; Quote</h3>
+          <p>
+            I’ll send over a clear outline of services and pricing. Once
+            confirmed, your date is reserved and we’re on the same page.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">Step 4</div>
+          <h3>Event Day Support</h3>
+          <p>
+            On the day of your event, I take care of the details so you can be
+            present with your guests.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Ready to talk about your event, or just want to see what’s possible?
+        Reach out — I’m happy to answer questions and help you decide what level
+        of support you need.
+      </p>
+
+      <div class="contact-box">
+        <div class="contact-details">
+          <p><strong>Call / Text:</strong> <a href="tel:+15702448405">(570) 244-8405</a></p>
+          <p><strong>Email:</strong>
+            <a href="mailto:premierhospitalityevents@gmail.com">
+              premierhospitalityevents@gmail.com
+            </a>
+          </p>
+          <p><strong>Based in:</strong> Greeley, Colorado – serving Northern Colorado and surrounding areas.</p>
+        </div>
+        <div class="contact-details">
+          <p><strong>Quick message template you can use:</strong></p>
+          <p style="font-size:0.9rem; color:#666;">
+            “Hi Micah, I’m planning an event on [date] at [location]. I’m
+            looking for help with [staffing / day-of coordination / planning].
+            Can you let me know your availability?”
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © Premier Hospitality Events – It’s my pleasure to serve your event.
+  </footer>
+</body>
+</html>
