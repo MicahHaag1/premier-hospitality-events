@@ -6,13 +6,19 @@
   <title>Premier Hospitality Events | Event Staffing & Day-Of Coordination</title>
   <meta name="description" content="Premier Hospitality Events provides professional event staffing, day-of coordination, and event planning in Northern Colorado. It’s our pleasure to serve your event.">
   <style>
-    .hero-image img {
-    width: 200px;
-    height: auto;
-    max-height: 10px;   /* adjust to preferred height */
-    object-fit: cover;   /* keeps image clean */
-    display: block;
+
+.hero-image {
+  max-height: 260px;   /* adjust this number to change header height */
+  overflow: hidden;    /* hides extra top/bottom of the photo */
 }
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* keeps image looking good */
+  display: block;
+}
+    
     :root {
       --blue: #0a4aac;
       --blue-dark: #05306f;
