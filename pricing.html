@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -27,20 +27,26 @@
     }
 
     .phe-header-bar p {
-      margin: 5px 0 0;
+      margin: 4px 0;
       font-size: 14px;
+    }
+
+    .tagline {
+      font-size: 13px;
+      opacity: 0.9;
     }
 
     .content {
       max-width: 900px;
       margin: 20px auto 40px auto;
-      padding: 0 15px;
+      padding: 0 15px 40px 15px;
+      background-color: #FFFFFF;
     }
 
     h2 {
       color: #1F4E79;
-      margin-top: 30px;
-      margin-bottom: 10px;
+      margin-top: 28px;
+      margin-bottom: 8px;
       font-size: 22px;
     }
 
@@ -58,7 +64,7 @@
     }
 
     ul {
-      margin: 0 0 12px 18px;
+      margin: 0 0 12px 20px;
       padding: 0;
       font-size: 15px;
     }
@@ -67,16 +73,9 @@
       margin-bottom: 4px;
     }
 
-    .tagline {
-      text-align: center;
-      font-size: 14px;
-      margin-top: 5px;
-      opacity: 0.9;
-    }
-
     .section-divider {
-      margin: 40px 0 20px;
-      border-top: 2px solid #DDD;
+      margin: 32px 0 24px;
+      border-top: 2px solid #E0E0E0;
     }
 
     .pricing-table {
@@ -88,7 +87,7 @@
 
     .pricing-table th,
     .pricing-table td {
-      border: 1px solid #CCC;
+      border: 1px solid #CCCCCC;
       padding: 8px 10px;
       vertical-align: top;
     }
@@ -100,34 +99,36 @@
       font-weight: 700;
     }
 
-    .pill-note {
-      display: inline-block;
-      background-color: #E5EFF7;
-      color: #1F4E79;
-      padding: 4px 10px;
-      border-radius: 12px;
-      font-size: 12px;
-      margin-top: 4px;
-    }
-
     .small-note {
       font-size: 12px;
       color: #555;
     }
 
+    .pdf-button {
+      display: inline-block;
+      background-color:#1F4E79;
+      color:white;
+      padding:12px 24px;
+      font-size:15px;
+      font-weight:600;
+      text-decoration:none;
+      border-radius:6px;
+      box-shadow:0 3px 8px rgba(0,0,0,0.25);
+      margin: 10px 0 20px 0;
+    }
+
     @media (max-width: 600px) {
+      .content {
+        padding: 0 12px 32px 12px;
+      }
+
       .pricing-table th,
       .pricing-table td {
         font-size: 13px;
       }
 
-      h2 {
-        font-size: 20px;
-      }
-
-      h3 {
-        font-size: 17px;
-      }
+      h2 { font-size: 20px; }
+      h3 { font-size: 17px; }
     }
   </style>
 </head>
@@ -136,16 +137,31 @@
   <!-- Top blue header -->
   <header class="phe-header-bar">
     <h1>Premier Hospitality Events</h1>
-    <p>Services, What’s Included & Pricing Overview</p>
+    <p>Services, What’s Included &amp; Pricing Overview</p>
     <p class="tagline">Premier Hospitality. Premier Experiences.</p>
   </header>
 
   <main class="content">
 
-    <!-- WHAT'S INCLUDED -->
-    <h2 id="whats-included">What’s Included</h2>
-    <p class="small-note">This section explains what you can expect when you work with Premier Hospitality Events.</p>
+    <!-- PDF DOWNLOAD BUTTON -->
+    <h2>Download Full Services &amp; Pricing (PDF)</h2>
+    <p class="small-note">
+      Perfect to share with venues, vendors, or anyone helping plan your event.
+    </p>
+    <a href="PHE_Pricing_And_Included_Bundle.pdf" class="pdf-button" target="_blank">
+      Download Services &amp; Pricing Bundle (PDF)
+    </a>
 
+    <div class="section-divider"></div>
+
+    <!-- WHAT’S INCLUDED + PRICING TOGETHER -->
+
+    <h2>What’s Included &amp; Pricing</h2>
+    <p class="small-note">
+      Every section below shows what’s included and the related pricing so you can see everything at a glance.
+    </p>
+
+    <!-- DAY-OF COORDINATION -->
     <h3>Day-of Coordination</h3>
     <ul>
       <li>Full event timeline review</li>
@@ -157,82 +173,7 @@
       <li>On-site problem solving and support</li>
     </ul>
 
-    <h3>Event Planning Support</h3>
-    <ul>
-      <li>Personalized planning guidance</li>
-      <li>Budget and vendor recommendations</li>
-      <li>Planning timeline strategy</li>
-      <li>Vendor coordination support as needed</li>
-    </ul>
-    <p><b>Additional planning options:</b></p>
-    <ul>
-      <li>Timeline creation: <b>$35/hr</b></li>
-      <li>Rehearsal management: <b>$35/hr</b></li>
-    </ul>
-
-    <h3>Food Service Operations</h3>
-    <ul>
-      <li>Professional food handling and guest-focused service</li>
-      <li>Setup and teardown for food stations</li>
-      <li>Coordination with caterers where applicable</li>
-      <li>Food handling/service fee: <b>$25</b></li>
-      <li>Food prep assistance: <b>$35/hr</b></li>
-      <li>Setup &amp; teardown labor: <b>$35/hr</b></li>
-    </ul>
-
-    <h3>Bar Services</h3>
-    <ul>
-      <li>Professional, certified bartending staff</li>
-      <li>Full bar setup and organization</li>
-      <li>Ice and cooler management</li>
-      <li>ID verification and safe service practices</li>
-      <li>Drink menu support and guidance</li>
-    </ul>
-    <p><b>Bar service rates:</b></p>
-    <ul>
-      <li>Bar operations: <b>$50/hr</b></li>
-      <li>Bartender: <b>$40/hr</b></li>
-      <li>Bar setup fee: <b>$50</b></li>
-      <li>Bar cleanup fee: <b>$50</b></li>
-    </ul>
-
-    <h3>Labor &amp; Staffing</h3>
-    <ul>
-      <li>Hospitality-experienced event staff</li>
-      <li>Setup and teardown support</li>
-      <li>On-site leadership available</li>
-      <li>General staff: <b>$40/hr</b></li>
-      <li>Supervisors: <b>$50/hr</b></li>
-      <li>Minimum staffing requirement: <b>4 hours</b></li>
-    </ul>
-
-    <h3>Travel, Delivery &amp; After-Hours</h3>
-    <ul>
-      <li>Delivery fee: <b>$25 + $0.50/mile</b> after 10 miles from 900 8th Ave, Greeley, CO 80631</li>
-      <li>Setup fee: <b>$100</b></li>
-      <li>After-hours labor: <b>$50/hr</b></li>
-    </ul>
-
-    <h3>Equipment Rentals</h3>
-    <p>
-      Equipment rentals are available for events. Pricing varies depending on the specific equipment and event
-      requirements. Details are provided during the booking and planning process.
-    </p>
-
-    <h3>Required Deposit</h3>
-    <ul>
-      <li>All bookings require a <b>25% deposit</b>.</li>
-      <li>Deposit is fully refundable if canceled at least <b>14 days</b> before the event.</li>
-      <li>Any purchased products, ingredients, or equipment specific to your event are non-refundable.</li>
-    </ul>
-
-    <div class="section-divider"></div>
-
-    <!-- PRICING SHEET -->
-    <h2 id="pricing">Pricing Overview</h2>
-    <p class="small-note">Pricing may vary based on event size, location, and specific needs. Custom quotes are available.</p>
-
-    <h3>Day-of Coordination Packages</h3>
+    <p><strong>Packages &amp; Pricing:</strong></p>
     <table class="pricing-table">
       <tr>
         <th>Package</th>
@@ -256,66 +197,99 @@
       </tr>
     </table>
 
-    <h3>Event Planning Services</h3>
-    <p>
-      <b>Full Planning:</b> Pricing varies depending on guest count and event scope.  
-      <br />
-      <b>Partial Planning:</b> Pricing depends on which planning elements and services are selected.  
-      <br />
-      <b>Vendor assistance:</b> Support with vendor communication and coordination — pricing varies.  
-      <br />
-      <b>Timeline creation:</b> <b>$35/hr</b>  
-      <br />
-      <b>Rehearsal management:</b> <b>$35/hr</b>
-    </p>
+    <!-- EVENT PLANNING -->
+    <h3>Event Planning Support</h3>
+    <ul>
+      <li>Personalized planning guidance</li>
+      <li>Budget and vendor recommendations</li>
+      <li>Planning timeline strategy</li>
+      <li>Vendor coordination support as needed</li>
+    </ul>
 
+    <p><strong>Planning Rates:</strong></p>
+    <ul>
+      <li><strong>Full Planning:</strong> custom quote based on guest count and event scope</li>
+      <li><strong>Partial Planning:</strong> custom quote based on selected planning elements</li>
+      <li><strong>Vendor assistance:</strong> custom quote depending on vendor count</li>
+      <li><strong>Timeline creation:</strong> $35/hr</li>
+      <li><strong>Rehearsal management:</strong> $35/hr</li>
+    </ul>
+
+    <!-- FOOD SERVICE -->
     <h3>Food Service Operations</h3>
-    <p>
-      <b>Full food service operations:</b> Pricing varies based on guest count and service style.
-      <br />
-      <b>Food handling/service fee:</b> $25
-      <br />
-      <b>Food prep assistance:</b> $35/hr
-      <br />
-      <b>Setup &amp; teardown:</b> $35/hr
-    </p>
+    <ul>
+      <li>Professional food handling and guest-focused service</li>
+      <li>Setup and teardown for food stations</li>
+      <li>Coordination with caterers where applicable</li>
+    </ul>
 
+    <p><strong>Food Service Pricing:</strong></p>
+    <ul>
+      <li><strong>Full food service operations:</strong> custom quote based on guest count and service style</li>
+      <li><strong>Food handling/service fee:</strong> $25</li>
+      <li><strong>Food prep assistance:</strong> $35/hr</li>
+      <li><strong>Setup &amp; teardown labor:</strong> $35/hr</li>
+    </ul>
+
+    <!-- BAR SERVICES -->
     <h3>Bar Services</h3>
-    <p>
-      <b>Bar operations:</b> $50/hr
-      <br />
-      <b>Bartender:</b> $40/hr
-      <br />
-      <b>Bar setup fee:</b> $50
-      <br />
-      <b>Bar cleanup fee:</b> $50
-    </p>
+    <ul>
+      <li>Professional, certified bartending staff</li>
+      <li>Full bar setup and organization</li>
+      <li>Ice and cooler management</li>
+      <li>ID verification and safe service practices</li>
+      <li>Drink menu support and guidance</li>
+    </ul>
 
-    <h3>Labor Pricing</h3>
-    <p>
-      <b>General staff:</b> $40/hr
-      <br />
-      <b>Supervisors:</b> $50/hr
-      <br />
-      <b>Minimum staffing hours:</b> 4
-    </p>
+    <p><strong>Bar Service Rates:</strong></p>
+    <ul>
+      <li><strong>Bar operations:</strong> $50/hr</li>
+      <li><strong>Bartender:</strong> $40/hr</li>
+      <li><strong>Bar setup fee:</strong> $50</li>
+      <li><strong>Bar cleanup fee:</strong> $50</li>
+    </ul>
 
-    <h3>Travel &amp; Delivery Fees</h3>
-    <p>
-      <b>Delivery fee:</b> $25 + $0.50/mile after 10 miles from 900 8th Ave, Greeley, CO 80631
-      <br />
-      <b>Setup fee:</b> $100
-      <br />
-      <b>After-hours fee:</b> $50/hr
-    </p>
+    <!-- LABOR & STAFFING -->
+    <h3>Labor &amp; Staffing</h3>
+    <ul>
+      <li>Hospitality-experienced event staff</li>
+      <li>Setup and teardown support</li>
+      <li>On-site leadership available</li>
+    </ul>
 
+    <p><strong>Labor Pricing:</strong></p>
+    <ul>
+      <li><strong>General staff:</strong> $40/hr</li>
+      <li><strong>Supervisors:</strong> $50/hr</li>
+      <li><strong>Minimum staffing requirement:</strong> 4 hours</li>
+    </ul>
+
+    <!-- TRAVEL, DELIVERY, AFTER-HOURS -->
+    <h3>Travel, Delivery &amp; After-Hours</h3>
+    <p><strong>Fees:</strong></p>
+    <ul>
+      <li><strong>Delivery fee:</strong> $25 + $0.50/mile after 10 miles from 900 8th Ave, Greeley, CO 80631</li>
+      <li><strong>Setup fee:</strong> $100</li>
+      <li><strong>After-hours labor:</strong> $50/hr</li>
+    </ul>
+
+    <!-- EQUIPMENT -->
     <h3>Equipment Rentals</h3>
     <p>
-      Equipment rental pricing varies by item and event. A detailed quote is provided once event needs are confirmed.
+      Equipment rentals are available for events. Pricing varies depending on the specific equipment
+      and event requirements. A detailed quote is provided once event needs are confirmed.
     </p>
 
+    <!-- DEPOSIT -->
+    <h3>Required Deposit (25%)</h3>
+    <ul>
+      <li>All bookings require a <strong>25% deposit</strong>.</li>
+      <li>Deposit is fully refundable if canceled at least <strong>14 days</strong> before the event.</li>
+      <li>Any purchased products, ingredients, or equipment specific to your event are non-refundable.</li>
+    </ul>
+
     <p class="small-note">
-      For a custom quote or to discuss your event in detail, please contact Premier Hospitality Events via the booking page or contact form.
+      For a custom quote or to discuss your event in detail, please use the booking form or contact section on the main site.
     </p>
 
   </main>
