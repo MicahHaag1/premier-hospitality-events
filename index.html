@@ -7,6 +7,23 @@
   <meta name="description" content="Premier Hospitality Events provides professional event staffing, day-of coordination, and event planning in Northern Colorado. It’s our pleasure to serve your event.">
   <style>
 
+.sticky-bottom-button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1F4E79;
+  color: white;
+  padding: 18px 0;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.2);
+  z-index: 9999;
+}
+    
 .featured-image {
     max-width: 500px;        /* controls overall size */
     margin: 2rem auto;       /* centers image + adds spacing */
@@ -751,5 +768,10 @@
   <footer>
     © Premier Hospitality Events – It’s my pleasure to serve your event.
   </footer>
+
+  <button class="sticky-bottom-button" onclick="window.location.href='booking.html'">
+  Book Your Event
+</button>
+  
 </body>
 </html>
